@@ -1,7 +1,12 @@
 [RDP]
 title=RDP
 description=Remote Desktop Protocol
-ports=3389
+ports=3389/tcp
+
+[Strapi]
+title=Strapi
+description=Strapi server
+ports=1337/tcp
 
 [docker-adsb-ultrafeeder]
 title=Ultrafeeder
