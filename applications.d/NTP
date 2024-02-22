@@ -1,4 +1,4 @@
 [NTP]
 title=NTP
 description=Network Time Protocol
-ports=123/tcp,123/udp
+ports=123/tcp|123/udp
