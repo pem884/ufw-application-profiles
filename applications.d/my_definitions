@@ -1,0 +1,34 @@
+[RDP]
+title=RDP
+description=Remote Desktop Protocol
+ports=3389
+
+[docker-adsb-ultrafeeder]
+title=Ultrafeeder
+description=Docker-based Ultrafeeder from https://github.com/sdr-enthusiasts/docker-adsb-ultrafeeder. Port 8080 is Tar1090 (map) web interface, 9273 is Prometheus web interface with data from readsb, and 9274 is Prometheus web interface with data from Telegraf.
+ports=8080/tcp|9273:9274/tcp
+
+[docker-dump978]
+title=Dump978
+description=This container provides the FlightAware 978MHz UAT decoder dump978-fa and wiedehopf's implementation of uat2esnt code within readsb. May be used alongside sdr-enthusiasts/docker-readsb-protobuf to provide UAT into several feeders. Container also contains InfluxData's Telegraf, and can send flight data and dump978 metrics to InfluxDB (if wanted - not started by default).
+ports=30980/tcp
+
+[influxdb]
+title=InfluxDB
+description=InfluxDB
+ports=8086/tcp
+
+[grafana]
+title=Grafana
+description=Grafana
+ports=3000/tcp
+
+[docker-planefence]
+title=PlaneFence
+description=Docker-based PlaneFence uses port 80 internally which is mapped to the host as port 8088.
+ports=8088/tcp
+
+[fr24feed]
+title=fr24feed
+description=Docker-based (docker-flightradar24) FlightRadar24 feeder uses port 8754 internally which is mapped directly to the host.
+ports=8754/tcp
